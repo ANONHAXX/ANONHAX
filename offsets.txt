@@ -1,52 +1,38 @@
-# offsets.txt — per-build kernel offsets used by KUCSharedMemory v2
-# edit on github.com or via any PR. raw link is a single-file live download.
-# last updated: 2026-09-25
-#
-# format: <symbol> = <hex>   ; <note>
-# blank lines and lines starting with # are ignored.
+CameraLocation=0x168
+CameraRotation=0x178
+visible_seconds=0x7A8
 
-# ---- Windows 11 24H2 (26100.x) x64 ----
-[win11_24h2_x64]
-EPROCESS.DirectoryTableBase   = 0x28
-EPROCESS.UniqueProcessId      = 0x440
-EPROCESS.ActiveProcessLinks   = 0x448
-EPROCESS.ImageFileName        = 0x5A8
-EPROCESS.Peb                  = 0x550
-EPROCESS.ThreadListHead       = 0x5E0
-ETHREAD.Cid                   = 0x630
-ETHREAD.Teb                   = 0x098
-KTHREAD.PreviousMode          = 0x232
-TEB.NtTib.ArbitraryUserPointer = 0x28
-PEB.ImageBaseAddress          = 0x10
-PEB.Ldr                       = 0x18
+UWORLD=0x1B2C5BA0
+GAME_INSTANCE=0x238
+LOCAL_PLAYERS=0x38
+PLAYER_CONTROLLER=0x30
+LOCAL_PAWN=0x318
+PAWN_PRIVATE=0x2E8
+ROOT_COMPONENT=0x1B0
+RELATIVE_LOCATION=0x140
+PLAYER_STATE=0x290
+TEAM_INDEX=0xF69
+GAME_STATE=0x1C0
+PLAYER_ARRAY=0x288
+MESH=0x2F0
+COMPONENT_TO_WORLD=0x1E0
+BONE_ARRAY=0x660
+BONE_ARRAY_CACHE=0x670
+LAST_SUBMIT_TIME=0x2E8
+LAST_SUBMIT_TIME_ON_SCREEN=0x2F0
 
-# ---- Windows 11 23H2 (22631.x) x64 ----
-[win11_23h2_x64]
-EPROCESS.DirectoryTableBase   = 0x28
-EPROCESS.UniqueProcessId      = 0x440
-EPROCESS.ActiveProcessLinks   = 0x448
-EPROCESS.ImageFileName        = 0x5A8
-EPROCESS.Peb                  = 0x550
-TEB.NtTib.ArbitraryUserPointer = 0x28
-PEB.ImageBaseAddress          = 0x10
-
-# ---- Windows 10 22H2 (19045.x) x64 ----
-[win10_22h2_x64]
-EPROCESS.DirectoryTableBase   = 0x28
-EPROCESS.UniqueProcessId      = 0x440
-EPROCESS.ActiveProcessLinks   = 0x448
-EPROCESS.ImageFileName        = 0x5A8
-EPROCESS.Peb                  = 0x550
-TEB.NtTib.ArbitraryUserPointer = 0x28
-PEB.ImageBaseAddress          = 0x10
-
-# ---- add per-title offsets below as you resolve them ----
-# example:
-# [game_myonline_1_2_3]
-# local_player_ptr             = 0x03A4E1F8
-# entity_list                  = 0x03A50230
-# view_matrix                  = 0x03B12CC0
-# entity.stride                = 0x2A80
-# entity.hp_offset             = 0x0100
-# entity.pos_offset            = 0x0170
-# entity.team_offset           = 0x0088
+VELOCITY=0x180
+CURRENT_WEAPON=0x9d0
+WEAPON_DATA=0x628
+DISPLAY_NAME=0x40
+HABANERO_COMPONENT=0x918
+RANKED_PROGRESS=0xD0
+PLATFORM=0x400
+WEAPON_NAME=0x40
+PERSISTENT_LEVEL=0x40
+ISDYING=0x728
+PLAYERNAME=0x9E8
+DEFAULTFOV=0x2BC
+BASEFOV=0x3AC
+PLAYER_ID=0x2AC
+PLAYERCAMERAMANAGER=0x360
