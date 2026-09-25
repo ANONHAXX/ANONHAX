@@ -1,0 +1,52 @@
+# offsets.txt — per-build kernel offsets used by KUCSharedMemory v2
+# edit on github.com or via any PR. raw link is a single-file live download.
+# last updated: 2026-09-25
+#
+# format: <symbol> = <hex>   ; <note>
+# blank lines and lines starting with # are ignored.
+
+# ---- Windows 11 24H2 (26100.x) x64 ----
+[win11_24h2_x64]
+EPROCESS.DirectoryTableBase   = 0x28
+EPROCESS.UniqueProcessId      = 0x440
+EPROCESS.ActiveProcessLinks   = 0x448
+EPROCESS.ImageFileName        = 0x5A8
+EPROCESS.Peb                  = 0x550
+EPROCESS.ThreadListHead       = 0x5E0
+ETHREAD.Cid                   = 0x630
+ETHREAD.Teb                   = 0x098
+KTHREAD.PreviousMode          = 0x232
+TEB.NtTib.ArbitraryUserPointer = 0x28
+PEB.ImageBaseAddress          = 0x10
+PEB.Ldr                       = 0x18
+
+# ---- Windows 11 23H2 (22631.x) x64 ----
+[win11_23h2_x64]
+EPROCESS.DirectoryTableBase   = 0x28
+EPROCESS.UniqueProcessId      = 0x440
+EPROCESS.ActiveProcessLinks   = 0x448
+EPROCESS.ImageFileName        = 0x5A8
+EPROCESS.Peb                  = 0x550
+TEB.NtTib.ArbitraryUserPointer = 0x28
+PEB.ImageBaseAddress          = 0x10
+
+# ---- Windows 10 22H2 (19045.x) x64 ----
+[win10_22h2_x64]
+EPROCESS.DirectoryTableBase   = 0x28
+EPROCESS.UniqueProcessId      = 0x440
+EPROCESS.ActiveProcessLinks   = 0x448
+EPROCESS.ImageFileName        = 0x5A8
+EPROCESS.Peb                  = 0x550
+TEB.NtTib.ArbitraryUserPointer = 0x28
+PEB.ImageBaseAddress          = 0x10
+
+# ---- add per-title offsets below as you resolve them ----
+# example:
+# [game_myonline_1_2_3]
+# local_player_ptr             = 0x03A4E1F8
+# entity_list                  = 0x03A50230
+# view_matrix                  = 0x03B12CC0
+# entity.stride                = 0x2A80
+# entity.hp_offset             = 0x0100
+# entity.pos_offset            = 0x0170
+# entity.team_offset           = 0x0088
